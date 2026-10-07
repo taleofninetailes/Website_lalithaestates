@@ -1,0 +1,1883 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #dff3ff;
+    color: #17324d;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 75px;
+    width: 100%;
+
+    background-color: #d9f1ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    position: relative;
+    z-index: 10;
+
+    border-bottom: 1px solid #b8dff5;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.logo-icon svg path {
+    stroke: #ffffff;
+}
+
+
+/* Logo text */
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+}
+
+.logo-text span {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.logo-text small {
+    font-size: 9px;
+    letter-spacing: 4px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+
+/* =========================================
+   NAVIGATION LINKS
+========================================= */
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #17324d;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #2384b5;
+}
+
+
+/* =========================================
+   BOOK NOW NAV BUTTON
+========================================= */
+
+.nav-button {
+    text-decoration: none;
+
+    color: #17324d;
+
+    border: 1px solid #17324d;
+
+    padding: 11px 23px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #17324d;
+    color: white;
+}
+
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero {
+    min-height: calc(100vh - 75px);
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 7%;
+
+    /* LIGHT BLUE LEFT BACKGROUND */
+
+    background-color: #c7e7f7;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   HOUSE IMAGE - RIGHT SIDE
+========================================= */
+
+.hero::after {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 48%;
+    height: 100%;
+
+    /*
+       YOUR ACTUAL IMAGE
+    */
+
+    background-image: url("images/indexpagehouse.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+}
+
+
+/* =========================================
+   LIGHT BLUE GRADIENT OVER IMAGE
+========================================= */
+.hero-overlay {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 55%;
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #dff3ff 0%,
+        #dff3ff 45%,
+        rgba(223, 243, 255, 0.75) 70%,
+        rgba(223, 243, 255, 0) 100%
+    );
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 650px;
+}
+
+
+/* =========================================
+   WELCOME TEXT
+========================================= */
+
+.welcome {
+
+    color: #17658a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.hero h1 {
+
+    color: #12304a;
+
+    font-size: 58px;
+
+    line-height: 1.08;
+
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+
+    color: #23445d;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+
+    max-width: 540px;
+
+    margin-bottom: 32px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   HERO BUTTONS
+========================================= */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 18px;
+}
+
+
+/* Common button */
+
+.btn {
+
+    display: inline-block;
+
+    padding: 14px 32px;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+
+/* =========================================
+   BOOK NOW
+========================================= */
+
+.book-btn {
+
+    background-color: #17324d;
+
+    color: white;
+
+    border: 1px solid #17324d;
+}
+
+.book-btn:hover {
+
+    background-color: #2384b5;
+
+    border-color: #2384b5;
+
+    color: white;
+}
+
+
+/* =========================================
+   KNOW MORE
+========================================= */
+
+.know-btn {
+
+    border: 1px solid #17324d;
+
+    color: #17324d;
+
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.know-btn:hover {
+
+    background-color: #17324d;
+
+    color: white;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+
+    background-color: #c8e9fa;
+
+    text-align: center;
+
+    padding: 15px;
+
+    color: #23445d;
+
+    font-size: 12px;
+
+    border-top: 1px solid #b8dff5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .navbar {
+        padding: 0 4%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 0 5%;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero::after {
+        width: 52%;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .navbar {
+
+        height: auto;
+
+        min-height: 75px;
+
+        padding: 12px 5%;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-button {
+
+        padding: 9px 14px;
+
+        font-size: 11px;
+    }
+
+    .hero {
+
+        min-height: calc(100vh - 75px);
+
+        padding: 0 7%;
+    }
+
+    /* House becomes background on mobile */
+
+    .hero::after {
+
+        width: 100%;
+
+        opacity: 0.35;
+
+        background-position: center;
+    }
+
+    .hero-overlay {
+
+        background: rgba(223, 243, 255, 0.78);
+    }
+
+    .hero h1 {
+
+        font-size: 40px;
+    }
+
+    .description {
+
+        font-size: 14px;
+    }
+
+    .hero-buttons {
+
+        gap: 10px;
+    }
+
+    .btn {
+
+        padding: 13px 22px;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+    .logo-text span {
+        font-size: 16px;
+    }
+
+    .logo-text small {
+        font-size: 7px;
+        letter-spacing: 3px;
+    }
+
+    .logo-icon {
+        width: 35px;
+        height: 35px;
+    }
+
+    .nav-button {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .welcome {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 160px;
+    }
+}
+/* =========================================
+   ABOUT PAGE
+========================================= */
+.
+
+.about-page {
+    min-height: calc(100vh - 75px);
+
+    background-color: #3b84b5;
+
+    padding: 60px 10%;
+
+    color: #17324d;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.about-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.about-heading p {
+    color: #17658a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+    
+}
+
+.about-heading h1 {
+    font-size: 38px;
+
+    color: #12304a;
+
+    letter-spacing: 2px;
+    text-decoration:underline;
+}
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-page {
+    min-height: calc(100vh - 75px);
+
+    background-color: #cfe7f7;
+
+    padding: 60px 10%;
+
+    color: #17324d;
+}
+
+
+/* =========================================
+   PAGE HEADING
+========================================= */
+
+.about-heading {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.about-heading p {
+    color: #17658a;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 10px;
+}
+
+.about-heading h1 {
+    font-size: 38px;
+
+    color: #12304a;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   ABOUT SECTIONS
+========================================= */
+
+.about-section {
+    max-width: 850px;
+
+    margin: 0 auto 40px auto;
+
+    text-align: center;
+}
+
+.about-section h2,
+.services-section h2 {
+    color: #12304a;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.about-section p {
+    color: #23445d;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   SERVICES
+========================================= */
+
+.services-section {
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+}
+
+.service-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    max-width: 500px;
+
+    margin: 25px auto 0 auto;
+}
+
+.service-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    color: #23445d;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    text-align: left;
+}
+
+.service-icon {
+    width: 35px;
+
+    height: 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #17324d;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 18px;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================
+   ABOUT PAGE MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .about-page {
+        padding: 45px 7%;
+    }
+
+    .about-heading h1 {
+        font-size: 30px;
+    }
+
+    .about-section h2,
+    .services-section h2 {
+        font-size: 21px;
+    }
+
+    .about-section p {
+        font-size: 15px;
+    }
+
+    .service-item {
+        font-size: 15px;
+    }
+}
+/* =========================================
+   GENERAL
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #222;
+    background-color: #f7f7f7;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+    height: 75px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 7%;
+
+    background-color: #18263d;
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 23px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+
+    color: white;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #c9962e;
+}
+
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-page {
+
+    min-height: calc(100vh - 75px);
+
+    background-color: #dff3ff;
+
+    padding: 55px 10% 70px;
+
+    color: #17324d;
+}
+
+
+/* =========================================
+   CONTACT HEADING
+========================================= */
+
+.contact-heading {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.contact-heading p {
+
+    color: #158a1f;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 4px;
+
+    text-decoration: underline;
+
+    text-underline-offset: 5px;
+
+    margin-bottom: 10px;
+}
+
+.contact-heading h1 {
+
+    color: #12304a;
+
+    font-size: 38px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-info {
+
+    max-width: 850px;
+
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+.contact-info h2 {
+
+    color:#158a1f ;
+
+    font-size: 24px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.contact-info p {
+
+    color: #23445d;
+
+    font-size: 16px;
+
+    margin: 12px 0;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-form {
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    background-color: rgba(255, 255, 255, 0.45);
+
+    padding: 30px 40px;
+
+    border: 1px solid #b8dff5;
+}
+
+
+/* Form heading */
+
+.contact-form h2 {
+
+    text-align: center;
+
+    color: #158a1f;
+
+    font-size: 22px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.contact-form form {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+/* Labels */
+
+.contact-form label {
+
+    color: #17324d;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+
+
+/* Input fields */
+
+.contact-form input,
+.contact-form textarea {
+
+    width: 100%;
+
+    padding: 11px 12px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid #8ebed8;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+    color: #17324d;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+
+/* Focus effect */
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+
+    border-color: #ff69b4;
+
+    box-shadow: 0 0 4px rgba(255, 105, 180, 0.3);
+}
+
+
+/* Message box */
+
+.contact-form textarea {
+
+    resize: vertical;
+
+    min-height: 100px;
+}
+
+
+/* =========================================
+   SEND BUTTON
+========================================= */
+
+.contact-form button {
+
+    width: fit-content;
+
+    margin: 5px auto 0;
+
+    padding: 13px 28px;
+
+    background-color: #17324d;
+
+    color: white;
+
+    border: 1px solid #17324d;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+
+    background-color: #ff69b4;
+
+    border-color: #ff69b4;
+
+    color: white;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .contact-page {
+
+        padding: 45px 7% 60px;
+    }
+
+    .contact-heading h1 {
+
+        font-size: 30px;
+    }
+
+    .contact-form {
+
+        padding: 25px 20px;
+    }
+
+    .contact-info p {
+
+        font-size: 14px;
+    }
+}
+/* =========================================
+   PROPERTIES PAGE
+========================================= */
+
+
+/* Page Heading */
+
+.properties-heading {
+    text-align: center;
+    padding: 50px 20px 25px;
+}
+
+.properties-heading h1 {
+    font-size: 42px;
+    color: #18263d;
+    margin-bottom: 10px;
+}
+
+.properties-heading p {
+    font-size: 17px;
+    color: #666;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 45px;
+}
+
+.search-box {
+    width: 650px;
+
+    display: flex;
+
+    background: white;
+
+    border-radius: 8px;
+
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.12);
+
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px 18px;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+.search-box button {
+    padding: 15px 25px;
+
+    border: none;
+
+    background-color: #18263d;
+
+    color: white;
+
+    font-size: 16px;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background-color: #c9962e;
+}
+
+
+/* =========================================
+   PROPERTY GRID
+========================================= */
+
+.properties-container {
+
+    width: 90%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 45px 55px;
+
+    padding-bottom: 60px;
+}
+
+
+/* =========================================
+   PROPERTY CARD
+========================================= */
+
+.property-card {
+
+    background-color: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+
+    transition: 0.3s;
+}
+
+.property-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   PROPERTY IMAGE
+========================================= */
+
+.property-card img {
+
+    width: 100%;
+
+    height: 280px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================================
+   PROPERTY DETAILS
+========================================= */
+
+.property-details {
+
+    padding: 20px;
+}
+
+.property-details h2 {
+
+    font-size: 23px;
+
+    color: #18263d;
+
+    margin-bottom: 8px;
+}
+
+.location {
+
+    color: #c9962e;
+
+    font-size: 15px;
+
+    margin-bottom: 12px;
+}
+
+.description {
+
+    color: #666;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   BED / BATH / AREA
+========================================= */
+
+.property-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eeeeee;
+
+    border-bottom: 1px solid #eeeeee;
+
+    padding: 14px 0;
+
+    margin-bottom: 18px;
+
+    color: #555;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PRICE + BUTTON
+========================================= */
+
+.property-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.property-bottom strong {
+
+    color: #c18b19;
+
+    font-size: 20px;
+}
+
+.property-bottom button {
+
+    background-color: #18263d;
+
+    color: white;
+
+    border: none;
+
+    padding: 11px 18px;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.property-bottom button:hover {
+
+    background-color: #c9962e;
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .properties-heading h1 {
+        font-size: 32px;
+    }
+
+    .properties-container {
+
+        grid-template-columns: 1fr;
+
+        width: 90%;
+
+        gap: 30px;
+    }
+
+    .search-box {
+
+        width: 90%;
+    }
+
+    .property-card img {
+
+        height: 240px;
+    }
+
+}
+/* =========================================
+   PROPERTY DETAILS PAGE
+========================================= */
+
+.property-detail-page {
+    padding: 60px 5%;
+    background-color: #f7f7f7;
+    min-height: 80vh;
+}
+
+.property-detail-container {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 50px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* IMAGE */
+
+.property-detail-image img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+}
+
+
+/* CONTENT */
+
+.property-detail-content {
+
+    padding: 15px 10px;
+}
+
+
+.property-label {
+
+    color: #c9962e;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+.property-detail-content h1 {
+
+    font-size: 40px;
+
+    color: #18263d;
+
+    margin: 12px 0;
+}
+
+
+.detail-location {
+
+    color: #666;
+
+    margin-bottom: 20px;
+}
+
+
+.detail-price {
+
+    color: #c18b19;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+}
+
+
+.detail-description {
+
+    color: #666;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+
+/* FEATURES */
+
+.detail-features {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 30px 0;
+
+    padding: 20px 0;
+
+    border-top: 1px solid #ddd;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.detail-features div {
+
+    text-align: center;
+}
+
+
+.detail-features strong {
+
+    display: block;
+
+    font-size: 22px;
+
+    color: #18263d;
+}
+
+
+.detail-features span {
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* AMENITIES */
+
+.amenities-title {
+
+    color: #18263d;
+
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+
+.amenities {
+
+    list-style: none;
+
+    padding: 0;
+
+    line-height: 2;
+
+    color: #555;
+}
+
+
+/* BUTTONS */
+
+.contact-agent-btn {
+
+    margin-top: 20px;
+
+    padding: 13px 25px;
+
+    background-color: #18263d;
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+}
+
+
+.contact-agent-btn:hover {
+
+    background-color: #c9962e;
+}
+
+
+.back-btn {
+
+    padding: 11px 20px;
+
+    background-color: #eee;
+
+    color: #333;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+}
+
+
+.back-btn:hover {
+
+    background-color: #ddd;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .property-detail-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .property-detail-image img {
+
+        height: 350px;
+
+    }
+
+    .property-detail-content h1 {
+
+        font-size: 32px;
+
+    }
+
+}
+/* =========================================
+   AGENTS PAGE
+========================================= */
+
+
+/* ---------- HERO SECTION ---------- */
+
+.agents-hero {
+    min-height: 280px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(31, 92, 66, 0.90),
+            rgba(24, 38, 61, 0.90)
+        );
+
+    color: white;
+
+    padding: 50px 20px;
+}
+
+.agents-hero-content p {
+    color: #d4af55;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.agents-hero-content h1 {
+    font-size: 48px;
+
+    margin-bottom: 12px;
+
+    font-weight: 700;
+}
+
+.agents-hero-content span {
+    font-size: 17px;
+
+    color: #eeeeee;
+}
+
+
+/* =========================================
+   AGENTS SECTION
+========================================= */
+
+.agents-section {
+    padding: 70px 5%;
+
+    background-color: #f7f8f5;
+}
+
+
+/* ---------- HEADING ---------- */
+
+.agents-heading {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 50px;
+}
+
+.section-label {
+    color: #b8892d;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 10px;
+}
+
+.agents-heading h2 {
+    color: #18263d;
+
+    font-size: 34px;
+
+    margin-bottom: 15px;
+}
+
+.agents-heading > p:last-child {
+    color: #666;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   AGENTS GRID
+========================================= */
+
+.agents-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   AGENT CARD
+========================================= */
+
+.agent-card {
+    background-color: white;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.agent-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   AGENT IMAGE
+========================================= */
+
+.agent-image {
+    width: 100%;
+
+    height: 300px;
+
+    overflow: hidden;
+
+    background-color: #e8ece8;
+}
+
+.agent-image img {
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.4s ease;
+}
+
+
+/* Image zoom on hover */
+
+.agent-card:hover .agent-image img {
+    transform: scale(1.05);
+}
+
+
+/* =========================================
+   AGENT DETAILS
+========================================= */
+
+.agent-details {
+    padding: 23px;
+}
+
+.agent-details h3 {
+    color: #18263d;
+
+    font-size: 21px;
+
+    margin-bottom: 7px;
+}
+
+.agent-role {
+    color: #2e6b4f;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    margin-bottom: 12px;
+}
+
+.agent-description {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    margin-bottom: 17px;
+}
+
+
+/* =========================================
+   AGENT CONTACT
+========================================= */
+
+.agent-contact {
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 14px;
+}
+
+.agent-contact p {
+    color: #666;
+
+    font-size: 13px;
+
+    margin-bottom: 7px;
+}
+
+
+/* =========================================
+   CALL TO ACTION
+========================================= */
+
+.agents-cta {
+    padding: 65px 20px;
+
+    text-align: center;
+
+    background-color: #18263d;
+
+    color: white;
+}
+
+.agents-cta h2 {
+    font-size: 32px;
+
+    margin-bottom: 12px;
+}
+
+.agents-cta p {
+    color: #d5d5d5;
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+}
+
+.agents-cta a {
+    display: inline-block;
+
+    text-decoration: none;
+
+    background-color: #b8892d;
+
+    color: white;
+
+    padding: 13px
